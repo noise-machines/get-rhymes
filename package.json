@@ -1,6 +1,6 @@
 {
   "name": "get-rhymes",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Pull great rhymes from RhymeZone and B-Rhymes. Includes near rhymes.",
   "main": "src/index.js",
   "scripts": {},
