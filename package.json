@@ -1,9 +1,12 @@
 {
   "name": "get-rhymes",
   "version": "1.0.1",
-  "description": "Pull great rhymes from RhymeZone and B-Rhymes. Includes near rhymes.",
+  "description":
+    "Pull great rhymes from RhymeZone and B-Rhymes. Includes near rhymes.",
   "main": "src/index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "jest"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/noise-machines/get-rhymes.git"
@@ -27,9 +30,10 @@
     "cheerio": "^1.0.0-rc.2",
     "lodash.sortby": "^4.7.0",
     "lodash.uniq": "^4.5.0",
-    "node-fetch": "^1.7.3"
+    "node-fetch": "^1.7.3",
+    "lodash.isstring": "^4.0.1"
   },
   "devDependencies": {
-    "lodash.isstring": "^4.0.1"
+    "jest": "^22.0.3"
   }
 }

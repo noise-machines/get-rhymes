@@ -1,34 +1,41 @@
-/*
-const test = require('ava')
+/* global expect, it, beforeAll */
+
 const getRhymes = require('./index')
 const isString = require('lodash.isstring')
 const sortBy = require('lodash.sortby')
 
 let rhymes
 
-test.before(async () => {
+beforeAll(async () => {
   rhymes = await getRhymes('simple')
 })
 
-test('returns an array', t => {
-  t.plan(1)
-  t.true(Array.isArray(rhymes))
+it('returns an array', () => {
+  expect.assertions(1)
+  expect(Array.isArray(rhymes)).toBe(true)
 })
 
-test('returns an array of strings', t => {
-  t.plan(rhymes.length)
+it('returns an array of strings', () => {
+  expect.assertions(rhymes.length)
   rhymes.forEach(rhyme => {
-    t.true(isString(rhyme))
+    expect(isString(rhyme)).toBe(true)
   })
 })
 
-test('returns an array of strings sorted by length', t => {
-  t.plan(rhymes.length)
+it('returns an array of strings sorted by length', () => {
+  expect.assertions(rhymes.length)
   const sortedRhymes = sortBy(rhymes, ['length'])
   sortedRhymes.forEach((sortedRhyme, i) => {
     const actualRhyme = rhymes[i]
-    t.is(sortedRhyme.length, actualRhyme.length)
+    expect(sortedRhyme.length).toEqual(actualRhyme.length)
   })
 })
 
-*/
+it('returns an empty array when asked to get rhymes for an empty string', async () => {
+  rhymes = await getRhymes('')
+  expect(rhymes.length).toBe(0)
+})
+
+it('throws an error when passed something besides a string', async () => {
+  await expect(getRhymes(null)).rejects.toThrowErrorMatchingSnapshot()
+})
