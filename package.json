@@ -1,10 +1,11 @@
 {
   "name": "get-rhymes",
-  "version": "1.0.0",
-  "description": "Get rhymes for a word. Combines results from RhymeZone and B-Rhymes.",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description":
+    "Get rhymes for a word. Combines results from RhymeZone and B-Rhymes.",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,15 @@
   "bugs": {
     "url": "https://github.com/noise-machines/get-rhymes/issues"
   },
-  "homepage": "https://github.com/noise-machines/get-rhymes#readme"
+  "homepage": "https://github.com/noise-machines/get-rhymes#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "lodash.sortby": "^4.7.0",
+    "lodash.uniq": "^4.5.0",
+    "node-fetch": "^1.7.3"
+  },
+  "devDependencies": {
+    "jest": "^22.0.3",
+    "lodash.isstring": "^4.0.1"
+  }
 }
