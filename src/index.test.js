@@ -1,32 +1,34 @@
-/* global expect, it, beforeAll */
-
+/*
+const test = require('ava')
 const getRhymes = require('./index')
 const isString = require('lodash.isstring')
 const sortBy = require('lodash.sortby')
 
 let rhymes
 
-beforeAll(async () => {
+test.before(async () => {
   rhymes = await getRhymes('simple')
 })
 
-it('returns an array', () => {
-  expect.assertions(1)
-  expect(Array.isArray(rhymes)).toBe(true)
+test('returns an array', t => {
+  t.plan(1)
+  t.true(Array.isArray(rhymes))
 })
 
-it('returns an array of strings', () => {
-  expect.assertions(rhymes.length)
+test('returns an array of strings', t => {
+  t.plan(rhymes.length)
   rhymes.forEach(rhyme => {
-    expect(isString(rhyme)).toBe(true)
+    t.true(isString(rhyme))
   })
 })
 
-it('returns an array of strings sorted by length', () => {
-  expect.assertions(rhymes.length)
+test('returns an array of strings sorted by length', t => {
+  t.plan(rhymes.length)
   const sortedRhymes = sortBy(rhymes, ['length'])
   sortedRhymes.forEach((sortedRhyme, i) => {
     const actualRhyme = rhymes[i]
-    expect(sortedRhyme.length).toEqual(actualRhyme.length)
+    t.is(sortedRhyme.length, actualRhyme.length)
   })
 })
+
+*/
