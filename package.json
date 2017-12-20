@@ -1,0 +1,28 @@
+{
+  "name": "get-rhymes",
+  "version": "1.0.0",
+  "description": "Get rhymes for a word. Combines results from RhymeZone and B-Rhymes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noise-machines/get-rhymes.git"
+  },
+  "keywords": [
+    "rhyme",
+    "poetry",
+    "rhymes",
+    "rhyming",
+    "dictionary",
+    "rhymezone",
+    "b-rhymes"
+  ],
+  "author": "C. Thomas Bailey (https://github.com/noise-machines)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noise-machines/get-rhymes/issues"
+  },
+  "homepage": "https://github.com/noise-machines/get-rhymes#readme"
+}
